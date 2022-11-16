@@ -1,0 +1,61 @@
+/* Styles Ajustes */
+
+/* El menú de navegación lateral */
+.sidebar {
+  margin: 0;
+  margin-top: -78px;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Enlaces */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Enlaces al pasar el mouse */
+.sidebar a:hover:not(.active) {
+  background-color: #212529;
+  color: white;
+}
+
+/* Contenido */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* En pantallas que tienen menos de 700 px de ancho,
+convierte la barra lateral en una barra superior */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+
+/* En pantallas de menos de 400 px, muestra la barra
+verticalmente, en lugar de horizontalmente */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
